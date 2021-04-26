@@ -1,0 +1,78 @@
+﻿@model Location_de_voitures.Models.Client
+@{
+    ViewBag.Title = "Login";
+}
+@Styles.Render("~/assets/css/my-login.css")
+
+
+
+
+    <body class="my-login-page" style="background:#1E5067 ;margin-top:100px;">
+     
+        <div class="container">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="@Href("~/assets/img/logo.jpg")" alt="logo">
+                    </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Login</h4>
+                            @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "my-login-validation" }))
+                            {
+
+                                if (@Session["RegisterMessage"]!=null )
+                                {
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Oh snap!</strong> @Session["RegisterMessage"]
+                        </div>
+                                }
+                                <h3> </h3>
+
+                                <div class="form-group" style="margin:10px">
+                                    <label for="email">E-Mail Address</label>
+                                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                                    <div class="invalid-feedback">
+                                        Email is invalid
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin:10px">
+                                    <label for="password">
+                                        Password
+
+                                    </label>
+                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    <div class="invalid-feedback">
+                                        Password is required
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin:10px">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                                        <label for="remember" class="custom-control-label">Remember Me</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0" style="margin:10px">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Login
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center" style="margin:10px">
+                                    Don't have an account?  @Html.ActionLink("Create One", "register", "Home", new object { }, new { @class = "", id = "Admin" })
+                                </div>
+                            }
+                        </div>
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    }
+

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Location_de_voitures.Models.Voiture>
+
+@{
+    ViewBag.Title = "Index";
+}
+@Styles.Render("~/assets/css/main.css")
+@Styles.Render("~/assets/css/util.css")
+@Styles.Render("~/assets/vendor/select2/select2.min.css")
+@Styles.Render("~/assets/vendor/perfect-scrollbar/perfect-scrollbar.css")
+<body class="my-login-page" style="background:#1E5067 ;margin-top:100px; color:aliceblue">
+    <div class="limiter">
+        <div class="container">
+            <h2>Index</h2>
+
+            <p>
+                @Html.ActionLink("Create New", "Create") |
+                @Html.ActionLink("Client", "Index", "Clients") |
+                @Html.ActionLink("VL", "Index", "LocationDeVoitures") |
+                @Html.ActionLink("Voitures", "Index", "Admin")
+
+            </p>
+
+
+
+            <div class="container-table100" style="background:#1E5067">
+                <div class="wrap-table100">
+                    <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1"> @Html.DisplayNameFor(model => model.Name)</th>
+                                        <th class="cell100 column2"> @Html.DisplayNameFor(model => model.PrixKm)</th>
+                                        <th class="cell100 column3">@Html.DisplayNameFor(model => model.datePriseduKm)</th>
+                                        <th class="cell100 column4"> @Html.DisplayNameFor(model => model.kilometrage)</th>
+                                        <th class="cell100 column5"> @Html.DisplayNameFor(model => model.ImgUrl)</th>
+                                        <th class="cell100 column5"> @Html.DisplayNameFor(model => model.ImgUrl)</th>
+
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">@Html.DisplayFor(modelItem => item.Name)</td>
+                                        <td class="cell100 column2"> @Html.DisplayFor(modelItem => item.PrixKm)</td>
+                                        <td class="cell100 column3">@Html.DisplayFor(modelItem => item.datePriseduKm)</td>
+                                        <td class="cell100 column4">@Html.DisplayFor(modelItem => item.kilometrage)</td>
+                                        <td class="cell100 column5"> <img src="~/carsImg/@Html.DisplayFor(modelItem =>item.ImgUrl)" class="img-circle" alt="img" style="width:40px;height:40px;" /></td>
+                                        <td class="cell100 column6" style="padding:10px">
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Vmatricule }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.Vmatricule }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Vmatricule })
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>

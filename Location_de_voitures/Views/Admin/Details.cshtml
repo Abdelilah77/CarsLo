@@ -1,0 +1,71 @@
+﻿@model Location_de_voitures.Models.Voiture
+
+@{
+    ViewBag.Title = "Details";
+}
+<body class="my-login-page" style="background:#1E5067 ;margin-top:100px; color:aliceblue">
+    <div class="container">
+        <h2>Details</h2>
+
+        <div>
+            <h4>Voiture</h4>
+            <hr />
+         
+        </div>
+       
+    </div>
+    <div class="container bootdey">
+        <div class="col-md-12">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="pro-img-details">
+                            <img src="~/carsImg/@Html.DisplayFor(model =>model.ImgUrl)" />
+                        </div>
+                     
+                    </div>
+                    <div class="col-md-6">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Name)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PrixKm)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PrixKm)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.datePriseduKm)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.datePriseduKm)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.kilometrage)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.kilometrage)
+                            </dd>
+
+
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", new { id = Model.Vmatricule }) |
+                                @Html.ActionLink("Back to List", "Index")
+                            </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>

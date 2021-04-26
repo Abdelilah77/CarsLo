@@ -1,0 +1,386 @@
+﻿@model IEnumerable<Location_de_voitures.Models.Voiture>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Moderna Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    @Styles.Render("~/assets/vendor/animate.css/animate.min.css")
+    @Styles.Render("~/assets/vendor/aos/aos.css")
+    @Styles.Render("~/assets/vendor/bootstrap/css/bootstrap.min.css")
+    @Styles.Render("~/assets/vendor/bootstrap-icons/bootstrap-icons.css")
+    @Styles.Render("~/assets/vendor/boxicons/css/boxicons.min.css")
+    @Styles.Render("~/assets/vendor/glightbox/css/glightbox.min.css")
+    @Styles.Render("~/assets/vendor/swiper/swiper-bundle.min.css")
+    @Styles.Render("~/assets/css/jquery.toast.css")
+
+
+
+
+    <!--===============================================================================================-->
+    <!-- Template Main CSS File -->
+    @Styles.Render("~/assets/css/style.css")
+    @Styles.Render("~/assets/css/cars.css")
+
+    <style>
+        .toastjs-container {
+            position: absolute;
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: calc(100% - 60px);
+            max-width: 400px;
+            transform: translateX(-150%);
+            transition: transform 1s;
+            z-index: 100
+        }
+
+            .toastjs-container[aria-hidden=false] {
+                transform: translateX(0)
+            }
+
+        .toastjs {
+            background: #fff;
+            padding: 10px 15px 0;
+            border-left-style: solid;
+            border-left-width: 5px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.2)
+        }
+
+            .toastjs.default {
+                border-left-color: #AAA
+            }
+
+            .toastjs.success {
+                border-left-color: #2ECC40
+            }
+
+            .toastjs.warning {
+                border-left-color: #FF851B
+            }
+
+            .toastjs.danger {
+                border-left-color: #FF4136
+            }
+
+        .toastjs-btn {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 4px;
+            font-family: 'Source Sans Pro',sans-serif;
+            font-size: 14px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer
+        }
+
+        .toastjs-btn--custom {
+            background: #323232;
+            color: #fff
+        }
+
+        .toastjs-btn:focus, .toastjs-btn:hover {
+            outline: 0;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.2)
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex justify-cntent-center align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Moderna</span></h2>
+                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Services Section ======= -->
+        <section class="services">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="icon-box icon-box-pink">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box icon-box-cyan">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box icon-box-green">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4 class="title"><a href="">Magni Dolores</a></h4>
+                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box icon-box-blue">
+                            <div class="icon"><i class="bx bx-world"></i></div>
+                            <h4 class="title"><a href="">Nemo Enim</a></h4>
+                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Why Us Section ======= -->
+        <div class="container">
+            <br>
+            
+            <br>
+            @{
+                int i = 4;
+            }
+            @foreach (var item in Model)
+            {
+                if (i == 3 || i == 4)
+                {
+                    @:<div class="row" id="ads">
+                        i = 0;
+                    }
+
+
+
+
+
+                    <!-- Category Card -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="card p-3 bg-white">
+                            <i class="fa fa-apple"></i>
+                            <div class="about-product text-center mt-2">
+                                <img style=" display: block; width: 100%; height: 100%; object-fit: cover; max-height:200px" src="@Href($"~/carsImg/{@Html.DisplayFor(modelItem => item.ImgUrl)}")" width="300">
+                                <div>
+                                    <h4> @Html.DisplayFor(modelItem => item.Name)</h4>
+                                    <h6 class="mt-0 text-black-50"> Voiture</h6>
+                                </div>
+                            </div>
+                            <div class="stats mt-2">
+                                <div class="d-flex justify-content-between p-price"><span>Prix Par Km</span><span>$@Html.DisplayFor(modelItem => item.PrixKm)</span></div>
+                                <div class="d-flex justify-content-between p-price"><span>kilometrage</span><span>@Html.DisplayFor(modelItem => item.kilometrage) KM</span></div>
+                                <div class="d-flex justify-content-between p-price"><span>datePriseduKm</span><span>@Html.DisplayFor(modelItem => item.datePriseduKm)</span></div>
+                            </div>
+
+                            @if ((string)@Session["login"] == "on")
+                            {
+                                if ((string)@Session["name"] == "Admin Mode")
+                                {
+                                    @Html.ActionLink("Details", "Details", "Admin", new { id = item.Vmatricule }, new { @class = "btn mb-3 mr-3 btn-light", id = "Admin" })
+
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Details", "Details", "Clients", new { id = item.Vmatricule }, new { @class = "btn mb-3 mr-3 btn-light", id = "Admin" })
+
+                                }
+                            }
+
+                            else
+                            {
+                                <div class="code-runner btn mb-3 mr-3 btn-light">
+                                    Details
+                                </div>
+                            }
+
+
+
+                        </div>
+                    </div>
+                    {
+                        i++;
+                    }
+                    if (i == 3 || i == 4)
+                    {
+                    @: </div>
+                }
+
+
+
+            }
+        </div><!-- End Why Us Section -->
+        <!-- ======= Features Section ======= -->
+        <section class="features" id="F">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Features</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src=" @Href("~/assets/img/features-1.svg")" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-4">
+                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                        <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5 order-1 order-md-2">
+                        <img src=" @Href("~/assets/img/features-2.svg")" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5 order-2 order-md-1">
+                        <h3>Corporis temporibus maiores provident</h3>
+                        <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                        </p>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src=" @Href("~/assets/img/features-3.svg")" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5">
+                        <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
+                        <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+                        <ul>
+                            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                            <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5 order-1 order-md-2">
+                        <img src=" @Href("~/assets/img/features-4.svg")" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5 order-2 order-md-1">
+                        <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+                        <p class="fst-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua.
+                        </p>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Features Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    @Scripts.Render("~/assets/vendor/aos/aos.js")
+    @Scripts.Render("~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js")
+    @Scripts.Render("~/assets/vendor/glightbox/js/glightbox.min.js")
+    @Scripts.Render("~/assets/vendor/isotope-layout/isotope.pkgd.min.js")
+    @Scripts.Render("~/assets/vendor/php-email-form/validate.js")
+    @Scripts.Render("~/assets/vendor/purecounter/purecounter.js")
+    @Scripts.Render("~/assets/vendor/swiper/swiper-bundle.min.js")
+    @Scripts.Render("~/assets/vendor/waypoints/noframework.waypoints.js")
+
+
+    <!-- Template Main JS File -->
+    @Scripts.Render("~/assets/js/main.js")
+    @Scripts.Render("~/assets/js/jquery.toast.js")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <script>
+        "use strict"; function Toast(t) { if (!t.message) throw new Error("Toast.js - You need to set a message to display"); this.options = t, this.options.type = t.type || "default", this.toastContainerEl = document.querySelector(".toastjs-container"), this.toastEl = document.querySelector(".toastjs"), this._init() } Toast.prototype._createElements = function () { var t = this; return new Promise(function (e, o) { t.toastContainerEl = document.createElement("div"), t.toastContainerEl.classList.add("toastjs-container"), t.toastContainerEl.setAttribute("role", "alert"), t.toastContainerEl.setAttribute("aria-hidden", !0), t.toastEl = document.createElement("div"), t.toastEl.classList.add("toastjs"), t.toastContainerEl.appendChild(t.toastEl), document.body.appendChild(t.toastContainerEl), setTimeout(function () { return e() }, 500) }) }, Toast.prototype._addEventListeners = function () { var t = this; if (document.querySelector(".toastjs-btn--close").addEventListener("click", function () { t._close() }), this.options.customButtons) { var e = Array.prototype.slice.call(document.querySelectorAll(".toastjs-btn--custom")); e.map(function (e, o) { e.addEventListener("click", function (e) { return t.options.customButtons[o].onClick(e) }) }) } }, Toast.prototype._close = function () { var t = this; return new Promise(function (e, o) { t.toastContainerEl.setAttribute("aria-hidden", !0), setTimeout(function () { t.toastEl.innerHTML = "", t.toastEl.classList.remove("default", "success", "warning", "danger"), t.focusedElBeforeOpen && t.focusedElBeforeOpen.focus(), e() }, 1e3) }) }, Toast.prototype._open = function () { this.toastEl.classList.add(this.options.type), this.toastContainerEl.setAttribute("aria-hidden", !1); var t = ""; this.options.customButtons && (t = this.options.customButtons.map(function (t, e) { return '<button type="button" class="toastjs-btn toastjs-btn--custom">' + t.text + "</button>" }), t = t.join("")), this.toastEl.innerHTML = "\n        <p>" + this.options.message + '</p>\n        <button type="button" class="toastjs-btn toastjs-btn--close">Close</button>\n        ' + t + "\n    ", this.focusedElBeforeOpen = document.activeElement, document.querySelector(".toastjs-btn--close").focus() }, Toast.prototype._init = function () { var t = this; Promise.resolve().then(function () { return t.toastContainerEl ? Promise.resolve() : t._createElements() }).then(function () { return "false" == t.toastContainerEl.getAttribute("aria-hidden") ? t._close() : Promise.resolve() }).then(function () { t._open(), t._addEventListeners() }) };
+
+        $('.code-runner').click(() => {
+            new Toast({
+                message: 'to See the Details you need to log in first',
+                type: 'danger'
+            });
+        })
+
+
+    </script>
+
+</body>
+
+</html>

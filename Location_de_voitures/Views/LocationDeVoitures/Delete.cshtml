@@ -1,0 +1,64 @@
+﻿@model Location_de_voitures.Models.LocationDeVoiture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LocationDeVoiture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateReservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateReservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datePaiment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datePaiment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Montant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Montant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

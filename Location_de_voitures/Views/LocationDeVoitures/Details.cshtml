@@ -1,0 +1,58 @@
+﻿@model Location_de_voitures.Models.LocationDeVoiture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LocationDeVoiture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateReservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateReservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datePaiment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datePaiment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Montant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Montant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idlocation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
